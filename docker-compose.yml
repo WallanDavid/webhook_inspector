@@ -1,0 +1,13 @@
+# docker-compose.yml
+
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: webhook_inspector
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    restart: unless-stopped
